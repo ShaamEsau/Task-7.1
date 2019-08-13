@@ -1,0 +1,50 @@
+/* Changes the color of the background */
+body {
+
+    background-color: powderblue;
+}
+
+/* Aligns the button and text to the right */
+#header {
+    float: right;
+}
+
+
+/* Sets the size of the image */
+#logo {
+    width: 150px;
+    height: 150px;
+}
+
+
+/* Adjusts the placement of the div box */
+#prodList {
+    margin-left: 70px;
+}
+
+/* Sets size, alignment and creates a border around the images */
+#prodImg {
+    float: left;
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    margin-left: 10px;
+}
+
+/* Aligns text */
+#AboutMe {
+    text-align: center;
+}
+
+
+/* Aligns text and insets an underline for the text */
+#Title {
+    text-decoration: underline;
+    text-align: center;
+}
+
+/* Puts elements inline with each other and centers text */
+#TitleHead {
+    display: inline;
+    text-align: center;
+}

@@ -1,26 +1,27 @@
+/* Imports React Library to be used on the page */
 import React from 'react';
-import logo from './logo.svg';
+/*Import Style Sheets to style its corresponding elements*/
 import './App.css';
+import "./StoreStyles.css";
+/* Calls JS files to be used on the page */
+import Login from "./Components/Header.js";
+import TextFileReader from "./Components/Landing.js"
+import Products from "./Components/Product.js"
 
+
+/* Creates function */
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        /* Creates div box */
+        <div>
+		{/* Calls the components to execute and display its information */}
+		<Login/>
+		<TextFileReader/><br/>
+		<Products/>
+ 
+	</div>
+    )
 }
 
+/* Makes file able to be imported to other files */
 export default App;
