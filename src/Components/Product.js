@@ -7,6 +7,13 @@ import Creeper from "../Images/creeper.jpg";
 import Chair from "../Images/chair.jpg";
 import { Image } from "react-bootstrap";
 
+
+const prodList = [
+				[Control,"Assorted Gaming Controls","R1000 - R1500"],
+				[Creeper, "Custom Cases", "R2000-R3000"],
+				[Chair , "Assorted Gaming Chairs", "R2000-R5000"]
+			]
+
 /* Creates React Function Component */
 const Products = () =>{
     /* Parses data to  a readable format on the HTML page */
@@ -16,17 +23,16 @@ const Products = () =>{
 			{/* Converts text to format heading 2 */}
 			<h2 id="Title">Product List</h2><br/>
 			<div>
-			{/* Inserts an image using imported data. Use react-bootstrap to style it */}
-			<Image id="prodImg" src={Control} roundedCircle/>
-			{/* Creates a paragraph to store text and adds a space */}
-			<p>Assorted Gaming Controls</p><br/>
-			<p>Price Range: R1000-1500</p>
-			<Image id="prodImg" src={Creeper} roundedCircle/>
-			<p>Custom Casing</p><br/>
-			<p>Price Range: R2000-3000</p>
-			<Image id="prodImg" src={Chair} roundedCircle/>
-			<p>Gaming Chairs</p><br/>
-			<p>Price Range: R2000-5000</p>
+
+			{/* Retrieves data from an array and inserts it into the element */}
+			{prodList.map((item) => 
+			<div>
+					{/* Creates a paragraph to store text and adds a space */}
+					<p>{item[1]}</p>
+					<p>{item[2]}</p>
+					{/* Inserts an image using imported data. Use react-bootstrap to style it */}
+					<Image id="prodImg" src= {item[0]} roundedCircle/>
+			</div>)}
 			</div>
 			</div>
    		)
